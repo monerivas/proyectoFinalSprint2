@@ -5,7 +5,37 @@
     <title></title>
   </head>
   <body>
+    <h1>Trello</h1>
+    <div>
 
+      <div id="contenedorDeListas">
+        <p>
+          <hr>
+          <h2>Pendientes semana</h2>
+          <ul id="lista1" type="circle">
+            <li>terminar examen</li>
+            <li>comer sushi</li>
+          </ul>
+          <h4>Agregar Pendiente</h4>
+          <input id="inputPendiente" placeholder="Ingresa pendiente"type="text">
+          <button id=" botonPendiente" onclick="agregarPrendiente();"type="button">Crear Pendiente</button>
+          <button id=" botonEliminarPendiente" onclick="eliminarPendiente();"type="button">Eliminar Pendiente</button>
+
+          <hr>
+        </p>
+      </div>
+
+      <div>
+        <h3>Agregar Lista</h3>
+        <p>
+          <input id="inputLista" placeholder="ingresa nueva lista"type="text">
+          <button id=" botonLista" onclick="agregarLista();" type="button">Crear Lista</button>
+        </p>
+      </div>
+
+      <button id=" botonPrueba" onclick="clonandoBoton();" type="button">Pruebas</button>
+
+    </div>
   </body>
   <script src="assets/js/javascript.js"></script>
 </html>
