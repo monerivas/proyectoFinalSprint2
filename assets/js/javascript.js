@@ -1,3 +1,8 @@
+/*Nota para el lector: agrega pendientes, elimina el pendiente en la posicion 0 del array.
+Crea la plantilla de listas nuevas pero no obtiene el valor del input de esa nueva lista
+ (obtiene el valor del input de la lista fija de muestra) y no lo imprime en el elemento lista de de esa nueva plantilla lista
+ (lo imprime en la lista fija de muestra)*/
+
 var listas=[];
 var pendientes=[];
 
