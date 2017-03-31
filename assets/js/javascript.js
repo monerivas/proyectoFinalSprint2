@@ -1,10 +1,31 @@
 /*Nota para el lector: agrega pendientes, elimina el pendiente en la posicion 0 del array.
 Crea la plantilla de listas nuevas pero no obtiene el valor del input de esa nueva lista
  (obtiene el valor del input de la lista fija de muestra) y no lo imprime en el elemento lista de de esa nueva plantilla lista
- (lo imprime en la lista fija de muestra)*/
+ (lo imprime en la lista fija de muestra), SEGUNDO INTENTO catastrofe, ineté seguir maso lo que hizo Manu en clase,
+ haciendo el constructor de los objetos para ponerles ahi de donde obtendría el id, o el string + id, o el data-lista-id,
+ pero me revolvi, y más con lo de hacer coincidir la memoria Data y la memoria visual, me voló la cabeza.Lo voy a seguir intentando con mucha más calma*/
+ var listas=[];
+ var pendientes=[];
 
-var listas=[];
-var pendientes=[];
+function Lista(id, titulo) {
+  this.titulo=titulo;
+  this.id=id;
+  this.pendientes=[];
+}
+
+function pendiente(id, contenido) {
+  this.id= id;
+  this.contenido=contenido;
+}
+
+function crearLista() {
+  var titulo= document.getElementById("inputLista");
+  var id= date.now();
+  var lista= new Lista(id, titulo.value);
+  listas.push(lista);
+}
+
+//-----------------------------------------------------------------------------
 
 function agregarPrendiente() {
   var inputPendiente= document.getElementById("inputPendiente").value;//Traduzco el elemento HTML, (en este caso un input) a una variable JS
@@ -19,12 +40,15 @@ function agregarPrendiente() {
   areaListaPendientes.appendChild(node);//al elemento area de impresion le pongo de hijo al nodo que ya trae todo lo anterior
   document.getElementById("inputPendiente").value= "";//esta liena borra el valor del input
   pendientes.push(node);//meto mi nodo (pendiente) al arreglo pendientes[]
+
+  var eliminarPendiente= function (pendientes) {
+    var lista1 = document.getElementById("lista1");
+    //lista1.removeChild(lista1.childNodes[0]);
+    lista1.removeChild(node);
+  }
 }
 
-function eliminarPendiente(pendientes) {
-  var lista1 = document.getElementById("lista1");
-  lista1.removeChild(lista1.childNodes[0]);
-}
+
 
 function agregarLista() {
   //titulo
